@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="wrapper">
+    <div class="form-wrapper">
+        <h2>Создать открытку</h2>
+        <form action="{% url 'create_image' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-error">{{ form.non_field_errors }}</div>
+
+            {% for f in form %}
+                <p><label class="form-label" for="{{f.id_for_label}}">{{f.label}}: </label>{{f}}</p>
+                <div class="form-error">{{f.errors}}</div>
+            {% endfor %}
+
+            <button class="save-button" type="submit">Сохранить</button>
+        </form>
+    </div>
+    <div class="preview-wrapper">
+        <h2>Предпросмотр</h2>
+            <div id="previewCard">
+                <p class="title-text"></p>
+                <p class="description-text"></p>
+            </div>
+        <p class="preview-text-overlimit">Текст выходит за пределы блока!</p>
+
+    </div>
+</div>
+
+{% endblock %}

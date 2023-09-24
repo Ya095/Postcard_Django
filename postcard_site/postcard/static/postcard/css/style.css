@@ -1,0 +1,193 @@
+html, body {
+	font-family: 'Arial';
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	color: #444;
+}
+
+.header {
+	background: #3F4137;
+	height: 60px;
+}
+
+.clear {clear: both;}
+
+ul.mainmenu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 60px;
+	color: #fdc073;
+	font-size: 20px;
+	overflow: hidden;
+}
+
+ul.mainmenu li {
+	float: left;
+	margin: 18px 40px 0 30px;
+}
+
+ul.mainmenu li a {
+	color: #fdc073;
+	text-decoration: none;
+}
+
+ul.mainmenu li a:hover {
+	color: #FDA83D;
+}
+
+.wrapper {
+    margin: 0px 10px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#previewCard {
+    border: 1px solid black;
+    width: 300px;
+    height: 450px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.title-text {
+    white-space: pre;
+    margin-right: 6px;
+    overflow: hidden;
+}
+
+.description-text {
+    overflow: hidden;
+    margin-right: 6px;
+    padding: 75% 5px 0px 5px;
+    white-space: pre;
+}
+
+.preview-text-overlimit {
+    display: none;
+    color: red;
+    justify-content: center;
+}
+
+.save-button {
+    width: 300px;
+    font-size: 17px;
+    height: 30px;
+    margin: 10px 15% 20px;
+    border-radius: 15px;
+}
+
+.success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.wrapper-saved-postcards {
+    margin: 20px 15px;
+}
+
+.postcards-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image {
+    width: 300px;
+    height: 450px;
+    align-items: center;
+    border: 1px solid white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.image > img {
+    max-width: 300px;
+    max-height: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.postcard {
+    margin: 15px 20px;
+}
+
+.check-favourite {
+    border: 1px solid;
+    padding: 5px 10px;
+    margin: 10px 20% 0;
+    width: 120px;
+    height: 23px;
+    border-radius: 17px;
+}
+
+.check-favourite input, label {
+    cursor: pointer;
+}
+
+.div-start-button {
+    display: flex;
+    justify-content: center;
+}
+
+.start-button {
+    margin: 20px 0 40px;
+    width: 300px;
+    font-size: 19px;
+    border-radius: 15px;
+    height: 37px;
+    cursor: pointer;
+}
+
+.carousel {
+    display: none;
+    justify-content: center;
+}
+
+
+
+@media screen and (min-width: 640px) and (max-width: 1060px) {
+
+    .wrapper-saved-postcards {
+        margin: 20px 0;
+    }
+
+    .start-button {
+        margin: 20px 0 40px;
+        width: 300px;
+        font-size: 19px;
+        border-radius: 15px;
+        height: 37px;
+        cursor: pointer;
+    }
+
+    .postcard {
+        margin: 15px 7px;
+    }
+
+    .save-button {
+        width: 250px;
+        font-size: 17px;
+        width: 300px;
+        height: 30px;
+        margin: 10px 5% 20px;
+        border-radius: 15px;
+    }
+
+
+}

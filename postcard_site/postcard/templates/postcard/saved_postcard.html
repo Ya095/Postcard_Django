@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="wrapper-saved-postcards">
+    <div class="postcards-list">
+        {% for post in postcards %}
+        <div class="postcard">
+            <div class="image" style="background-image: url('{{post.image.url}}');">
+                <p class="title-text" style="text-align: {{post.title_align}};
+                          font-family: {{post.title_font}};
+                          color: {{post.colour}}"
+                >{{post.title}}</p>
+                <p class="description-text" style="text-align: {{post.description_align}};
+                          font-family: {{post.description_font}};
+                          color: {{post.colour}}"
+                >{{post.description}}</p>
+            </div>
+            <div class="check-favourite">
+                <input class="hidden" value="{{post.id}}" name="favourite" type="checkbox"
+                       id="favourite-{{post.id}}">
+<!--                       {% if post.is_favourite %} checked {% endif %}-->
+
+                <label for="favourite-{{post.id}}">Избранное</label>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="div-start-button">
+        <button class="start-button" type="submit">Старт</button>
+    </div>
+
+    <div class="carousel"></div>
+
+</div>
+
+{% endblock %}
