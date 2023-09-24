@@ -1,6 +1,8 @@
-const startButton = document.querySelector(".start-button");
-const carousel = document.querySelector(".carousel")
-const postcard_list = document.querySelector(".postcards-list")
+var startButton = document.querySelector(".start-button");
+var carousel = document.querySelector(".carousel")
+var postcard_list = document.querySelector(".postcards-list")
+var screenWidth = window.innerWidth;
+
 
 startButton.addEventListener("click", function(event) {
     let postcards = document.querySelectorAll('.postcard input[type="checkbox"]:checked');
@@ -26,6 +28,12 @@ startButton.addEventListener("click", function(event) {
         carousel.style.display="block";
     } else if (counter === 1) {
         posts_count = 1
+    } else if (screenWidth <= 425) {
+        posts_count = 1
+    } else if (screenWidth <= 768) {
+        posts_count = 2
+    } else if (screenWidth >= 2000 && counter > 3) {
+        posts_count = 4
     } else if (counter === 2) {
         posts_count = 2
     } else if (counter > 2) {
