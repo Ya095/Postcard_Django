@@ -23,6 +23,6 @@ class Postcard(models.Model):
     description_align = models.CharField(max_length=255, choices=align_text, default='left')
     description_font = models.CharField(max_length=255, choices=font_text, default='Arial')
     colour = models.CharField(max_length=20)
-    is_favourite = models.BooleanField(default=False)
+    # is_favourite = models.BooleanField(default=False)
 
     objects = models.Manager()
